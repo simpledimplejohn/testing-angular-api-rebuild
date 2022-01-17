@@ -1,0 +1,31 @@
+<div>
+  <div>
+    <!-- title is one way property binding or interpolation, can't change it, read only,  -->
+    <h2 class="card-header text-center">{{title}}</h2>
+  </div>
+  <div class="card-body">
+    <!-- builds a for loop from object from the class -->
+    <ul *ngFor="let u of users" class="list-group">
+      <!-- build a list item for each property -->
+      <li class="list-group-item">id: {{u.id}}</li>
+      <li class="list-group-item">First Name: {{u.firstName}}</li>
+      <li class="list-group-item">Last Name: {{u.lastName}}</li>
+      <li class="list-group-item">username: {{u.username}}</li>
+      <li class="list-group-item">Password: {{u.pasword}}</li>
+      <li class="list-group-item">email: {{u.email}}</li>
+      <br>
+    </ul>
+
+    <!--  If there are no users in the array diplay this HTML (structural directive) -->
+    <!-- if users array  is empty show this-->
+    <div *ngIf="users.length == 0">
+      <!-- message property of the message -->
+      {{ clientMessage.message}}
+    </div>
+    <div>
+      <!-- how to handle event binding for a button to a method -->
+      <button class="btn-secondary btn-center" (click)="findAllUsers()">Fetch Users!</button>
+    </div>
+
+  </div>
+</div>
