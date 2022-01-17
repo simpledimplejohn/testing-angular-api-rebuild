@@ -4,7 +4,7 @@ export class User {
   firstName: string;
   lastName: string;
   username: string;
-  pasword: string;
+  password: string;
   email:string;
   addresses: Address[];
 
@@ -21,7 +21,7 @@ export class User {
     this.firstName = firstName
     this.lastName = lastName
     this.username = username
-    this.pasword = password
+    this.password = password
     this.email = email
     this.addresses = addresses
   }

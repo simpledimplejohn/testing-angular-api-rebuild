@@ -10,43 +10,43 @@
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputFirstName">First Name:</label>
+          <label for="firstName">First Name:</label>
           <!-- We need to bind the values caputred in the teamplte to our application data -->
-          <input type="text" name="fname" class="form-control" id="inputFirstName">
+          <input type="text" name="fname" [(ngModel)]="user.firstName" class="form-control" id="firstName">
         </div>
         <div class="form-group col-md-6">
           <label for="inputLastName">Last Name:</label>
-          <input type="text" name="lname" class="form-control" id="inputLastName">
+          <input type="text" name="lname" [(ngModel)]="user.lastName" class="form-control" id="inputLastName">
         </div>
         <div class="form-group col-md-6">
           <label for="inputUsername">Username:</label>
-          <input type="text" name="username" class="form-control" id="inputUsername">
+          <input type="text" name="username" [(ngModel)]="user.username" class="form-control" id="inputUsername">
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword">Password:</label>
-          <input type="password" name="password" class="form-control" id="inputPassword">
+          <input type="password" name="password" [(ngModel)]="user.password" class="form-control" id="inputPassword">
         </div>
         <div class="form-group col-md-12">
           <label for="inputEmail">Email:</label>
-          <input type="email" name="email" class="form-control" id="inputEmail">
+          <input type="email" name="email" [(ngModel)]="user.email" class="form-control" id="inputEmail">
         </div>
       </div>
       <div class="form-group">
         <label for="inputStreet">Street:</label>
-        <input type="text" name="street" class="form-control" id="inputStreet">
+        <input type="text" name="street" [(ngModel)]="address.street" class="form-control" id="inputStreet">
       </div>
       <div class="form-group">
         <label for="inputAddress2">Address 2:</label>
-        <input type="text" name="secondary" class="form-control" id="inputAddress2">
+        <input type="text" name="secondary" [(ngModel)]="address.secondary" class="form-control" id="inputAddress2">
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputCity"> City:</label>
-          <input type="text" name="city" class="form-control" id="inputCity">
+          <input type="text" name="city" [(ngModel)]="address.city" class="form-control" id="inputCity">
         </div>
         <div class="form-group col-md-4">
           <label for="inputState"> State:</label>
-          <select type="text" name="state" class="form-control" id="inputState">
+          <select type="text" name="state" [(ngModel)]="address.state" class="form-control" id="inputState">
             <option value="">N/A</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
@@ -104,9 +104,9 @@
         </div>
         <div class="form-group col-md-2">
           <label for="inputZipcode">Zip:</label>
-          <input text="text" name="zip" class="form-control" id="inputZip">
+          <input text="text" name="zip" [(ngModel)]="address.zip" class="form-control" id="inputZip">
         </div>
-        <button type="submit" class="btn btn-secondary" (click)="registerUser()">Register</button>
+        <button type="submit" class="btn btn-secondary" (click)="registerUser()"></button>
       </div>
 
     </form>

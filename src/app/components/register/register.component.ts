@@ -16,6 +16,8 @@ export class RegisterComponent {
   public address = new Address('','','','','')
   public clientMessage = new ClientMessage('') //alow an alert to the user wether register is
 
+  public firstName: string = "";
+
   constructor(private userSevice: UserService) { }
 
   public registerUser(): void {
@@ -28,10 +30,11 @@ export class RegisterComponent {
         )
   }
 
-  getData(data:NgForm)
-  {
-    console.warn(data)
-  }
+  // getData(data:NgForm)
+  // {
+  //   console.warn(data)
+
+  // }
 
 
   // ngOnInit(): void {
